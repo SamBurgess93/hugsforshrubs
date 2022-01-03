@@ -1,108 +1,77 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# HugsForShrubs
 
-Welcome SamBurgess93,
+![Preview](???)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[Link to the Live Project](???).
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+HugsForShrubs has been built as the 4th milestone project as part of Code Institute's Full Stack Software Development course.
+HugsForShrubs is a virtual 'E-commerce Website’ in whcih customers can purchase and browse Macrame plant hangers. It provides the user with a list of the various products available for purchase in the store. For the convenience of online shopping, a shopping cart is provided to the user. After the selection of the goods, it is sent to the order confirmation process for collection of payment. The system is implemented using Python’s web framework Django.
 
-## Gitpod Reminders
+## Table of contents
+1. [UX](#ux)
+    1. [Project Goals](#project-goals)
+    2. [User Stories](#user-stories)
+    3. [Development Planes](#development-planes)
+    4. [Changes Made During Project Development](#changes-made-during-project-development)
+2. [Features](#features)
+    1. [Existing Features](#existing-features)
+    2. [Features to Implement in the future](#features-to-implement-in-the-future)
+3. [Technologies Used](#technologies-used)
+     1. [Languages and Frameworks](#languages-and-frameworks)
+     2. [Applications](#applications)
+4. [Testing](#testing)
+5. [Deployment](#deployment)
+     1. [Database Creation](#database-creation)
+     2. [Local Copy Creation](#local-copy-creation)
+     3. [Heroku App Creation](#heroku-app-creation)
+6. [Credits](#credits)
+     1. [Images](#images)
+     2. [Code](#code)
+7. [Acknowledgements](#acknowledgements)
+***
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## UX 
+### Project Goals
+The scope of this project is to create a 'E-commerce website'. 
+ 
+This is my 4th and final Milestone Project that must be developed as part of my Full Stack software development course with Code Institute.
 
-`python3 -m http.server`
+The primary goal of the HugsForShrubs website is engage with visitors to the website and as a result sell the handcrafted macrame plant hangers products.
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+### User Stories
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+**As a first time visitor, I want to:**
 
-Another blue button should appear to click: _Open Browser_.
+1. Easily understand the main purpose of the website.
+2. Navigate through the site with ease.
+3. View a list of specific products of my choosing based on their category. So that I can select a particular category of product from a specific list to buy.
+4. View the details of a single product. So that I can understand the details and price of the product and also see and image of the product.
+5. Sort the view of products by price low to high. So that I can make an informed purchased based on price.
+6. Sort the view of products by price high to low. So that I can make an informed purchased based on price.
+7. Be easily able to register and create my own account so I can have a personalised experience.
+8. Receive an verification email to verify that my account was set up.
+9. Easily view the value of my shopping cart anywhere on the website. So that I can understand how much I have selected.
+10. Easily view a summary of what's in my shopping cart, including all prices such as delivery and grand total price before I purchase. So that I can see how much I will be spending.
+11. See all reviews for the products.
+12. Check out and purchase my items without having to log in. So that I can conveniently purchase items quickly.
+13. Easily view the contact details for the company. So I can contact Hugs For Shrubs about my orders or requirements.
+14. Have easy and quick access to the companies social media links.
+15. Search for a specific product using keywords in a search bar.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+**As a registered user, I want to:**
+1. Login to my own account effortlessly so that I can access my profile to view my orders.
+2. Logout of my account effortlessly to keep my details secure.
+3. Easily recover my password if I forget it. So that I can recover my access to my profile.
+4. Have a personalised profile so that I can view my order history.
+5. View my order history, order confirmations, and saved payment information in my profile.
+6. Be able to update my payment and personal details if required.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+**As a superuser, I want to:**
+1. Be able to add new products to the store easily.
+2. Edit/update existing store products to change pricing, images and other criteria.
+3. Delete items that are to be discontinued.
