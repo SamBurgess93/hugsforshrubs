@@ -187,7 +187,7 @@ The Checkout page is split into two columns on larger devices, and 2 rows on sma
 
 <strong>4. <u>Skeleton</u></strong>
 
-Wireframe mockups were created in a [Figma Workspace](https://www.figma.com/file/2Nn1oK8aWFLJcHwU8yChCI/GamerHUB?node-id=0%3A1 "Link to GamerHUB Figma Workspace") with providing a positive user experience in mind:
+Wireframes and  Mockups were created in a Balsamiq Workspace with providing a positive user experience in mind:
 
 ## Wireframes
 <details>
@@ -195,16 +195,16 @@ Wireframe mockups were created in a [Figma Workspace](https://www.figma.com/file
   <img src="readme-docs/home.png">
 </details>
 <details>
-  <summary>Films </summary>
-  <img src="readme-docs/films.png">
+  <summary>About </summary>
+  <img src="readme-docs/about.png">
 </details>
 <details>
-  <summary>Films details </summary>
-  <img src="readme-docs/film-detail.png">
+  <summary>All products </summary>
+  <img src="readme-docs/products.png">
 </details>
 <details>
-  <summary>Shop </summary>
-  <img src="readme-docs/shop.png">
+  <summary>Product Details </summary>
+  <img src="readme-docs/product-details.png">
 </details>
 <details>
   <summary>Login </summary>
@@ -219,12 +219,8 @@ Wireframe mockups were created in a [Figma Workspace](https://www.figma.com/file
   <img src="readme-docs/profile.png">
 </details>
 <details>
-  <summary>Product Details </summary>
-  <img src="readme-docs/product_detail.png">
-</details>
-<details>
   <summary>Add product(Admin) </summary>
-  <img src="readme-docs/Add.png">
+  <img src="readme-docs/add-product.png">
 </details>
 <details>
   <summary>Checkout </summary>
@@ -232,7 +228,7 @@ Wireframe mockups were created in a [Figma Workspace](https://www.figma.com/file
 </details>
 <details>
   <summary>Checkout Success</summary>
-  <img src="readme-docs/checkout_success.png">
+  <img src="readme-docs/checkout-success.png">
 </details>
 <details>
   <summary>Bag</summary>
@@ -240,5 +236,49 @@ Wireframe mockups were created in a [Figma Workspace](https://www.figma.com/file
 </details>
 
  ---   
-
+## Mockups
+<details>
+  <summary>Home</summary>
+  <img src="readme-docs/home-m.PNG">
+</details>
+<details>
+  <summary>About </summary>
+  <img src="readme-docs/about-m.PNG">
+</details>
+<details>
+  <summary>All products </summary>
+  <img src="readme-docs/products-m.PNG">
+</details>
+<details>
+  <summary>Product Details </summary>
+  <img src="readme-docs/product-details-m.PNG">
+</details>
+<details>
+  <summary>Login </summary>
+  <img src="readme-docs/login-m.PNG">
+</details>
+<details>
+  <summary>Register </summary>
+  <img src="readme-docs/register-m.PNG">
+</details>
+<details>
+  <summary>Profile </summary>
+  <img src="readme-docs/profile-m.PNG">
+</details>
+<details>
+  <summary>Add product(Admin) </summary>
+  <img src="readme-docs/add-product-m.PNG">
+</details>
+<details>
+  <summary>Checkout </summary>
+  <img src="readme-docs/checkout-m.PNG">
+</details>
+<details>
+  <summary>Checkout Success</summary>
+  <img src="readme-docs/checkout-success-m.PNG">
+</details>
+<details>
+  <summary>Bag</summary>
+  <img src="readme-docs/bag-m.PNG">
+</details>
 
