@@ -77,11 +77,11 @@ The primary goal of the HugsForShrubs website is engage with visitors to the web
 
 In order to design and create Hugs For Shrubs, I developer distinguished the required functionality of the site and how it would answer the user stories, as described above, using the **Five Development Planes**:
 
-<strong>1. <u>Strategy</u></strong>
+## <strong>1. <u>Strategy</u></strong>
 
 The Hugs For Shrubs is an online e-commerce site with front-end and back-end functionality, developed using HTML, JavaScript, CSS, Python and Django. The main objective is to create a site delivers on the user stories outlined above.
 
-<strong>2. <u>Scope</u></strong>
+## <strong>2. <u>Scope</u></strong>
 
 The scope was created from using the Strategy previously defined. This allowed us to align the features to deliver on the strategy/ user stories. This was seperated into two categories:
 - **Content Requirements**
@@ -89,6 +89,7 @@ The scope was created from using the Strategy previously defined. This allowed u
           - Dynamic and inviting visuals
           - Simple and vibrant content
           
+<br/>
 
 - **Functionality Requirements**
      - The user will be able to:
@@ -99,7 +100,7 @@ The scope was created from using the Strategy previously defined. This allowed u
           - Register for profile
           - Get contact details for owner
 
-<strong>3. <u>Structure</u></strong>
+## <strong>3. <u>Structure</u></strong>
 
 ### Allauth features
 The sign up, register, password reset, email confirmation pages etc, have all been provided by Django allauth and formatted to suit the needs of the site.
@@ -134,7 +135,8 @@ The footer has the links to the social media links and contains the contact emai
 ### Homepage
 The home page has the navigation links, logo, hero image, call to action button, product categories and the footer.
 ### About Me
-The about page gives the user information on the company and owner. This will have an image.
+The about page gives the user a short background on Hugs For Shrubs. This will also contain a contact form and a submit button.
+The user will see an alert on the screen confirming the message has been sent.
 ### Product page
 The product page displays all products in the store.
 The sorting range button is also displayed here to allow the users sort products based on price, name and category.
@@ -181,12 +183,13 @@ The Checkout page is split into two columns on larger devices, and 2 rows on sma
   - When the used has added products to their wishlist ; they will be displayed here in the same format as the products page.
 
 ### Features left to implement
+<br/>
 
-<strong>4. <u>Skeleton</u></strong>
+## <strong>4. <u>Skeleton</u></strong>
 
 Wireframes and  Mockups were created in a Balsamiq Workspace with providing a positive user experience in mind:
 
-## Wireframes
+### Wireframes
 <details>
   <summary>Home</summary>
   <img src="readme-docs/home.png">
@@ -233,7 +236,7 @@ Wireframes and  Mockups were created in a Balsamiq Workspace with providing a po
 </details>
 
  ---   
-## Mockups
+### Mockups
 <details>
   <summary>Home</summary>
   <img src="readme-docs/home-m.PNG">
@@ -278,8 +281,10 @@ Wireframes and  Mockups were created in a Balsamiq Workspace with providing a po
   <summary>Bag</summary>
   <img src="readme-docs/bag-m.PNG">
 </details>
+<br/>
 
-<strong>5. <u>Surface</u></strong>
+
+## <strong>5. <u>Surface</u></strong>
 
 - <strong>Colour Scheme</strong>
 
