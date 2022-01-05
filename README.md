@@ -14,12 +14,13 @@ HugsForShrubs is a virtual 'E-commerce Website’ in which customers can purchas
     3. [Development Planes](#development-planes)
     4. [Changes Made During Project Development](#changes-made-during-project-development)
 2. [Technologies Used](#technologies-used)
-3. [Testing](#testing)
-4. [Deployment](#deployment)
-5. [Credits](#credits)
+3. [Database Schema](#database-schema)
+4. [Testing](#testing)
+5. [Deployment](#deployment)
+6. [Credits](#credits)
      1. [Images](#images)
      2. [Code](#code)
-6. [Acknowledgements](#acknowledgements)
+7. [Acknowledgements](#acknowledgements)
 ***
 
 ## UX 
@@ -316,6 +317,9 @@ Wireframes and  Mockups were created in a Balsamiq Workspace with providing a po
      - The charismatic combination of the typefaces compliments the clean aesthetic and entertaining theme set by the colour palette.
 
 [Back to top ⇧](#table-of-contents)
+
+## Database Schema
+![Database Schema](/readme-docs/database-drawing.PNG)
 
 ## Technologies Used
 
