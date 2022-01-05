@@ -5,7 +5,7 @@
 [Link to the Live Project](???).
 
 HugsForShrubs has been built as the 4th milestone project as part of Code Institute's Full Stack Software Development course.
-HugsForShrubs is a virtual 'E-commerce Website’ in whcih customers can purchase and browse Macrame plant hangers. It provides the user with a list of the various products available for purchase in the store. For the convenience of online shopping, a shopping cart is provided to the user. After the selection of the goods, it is sent to the order confirmation process for collection of payment. The system is implemented using Python’s web framework Django.
+HugsForShrubs is a virtual 'E-commerce Website’ in which customers can purchase and browse Macrame plant hangers. It provides the user with a list of the various products available for purchase in the store. For the convenience of online shopping, a shopping cart is provided to the user. After the selection of the goods, it is sent to the order confirmation process for collection of payment. The system is implemented using Python’s web framework Django.
 
 ## Table of contents
 1. [UX](#ux)
@@ -14,13 +14,8 @@ HugsForShrubs is a virtual 'E-commerce Website’ in whcih customers can purchas
     3. [Development Planes](#development-planes)
     4. [Changes Made During Project Development](#changes-made-during-project-development)
 2. [Technologies Used](#technologies-used)
-     1. [Languages and Frameworks](#languages-and-frameworks)
-     2. [Applications](#applications)
 3. [Testing](#testing)
 4. [Deployment](#deployment)
-     1. [To contribute to the project](#to-contribute-to-the-project)
-     2. [Deploying to Heroku](#deploying-to-heroku)
-     3. [Heroku App Creation](#heroku-app-creation)
 5. [Credits](#credits)
      1. [Images](#images)
      2. [Code](#code)
@@ -65,6 +60,8 @@ The primary goal of the HugsForShrubs website is engage with visitors to the web
 4. Have a personalised profile so that I can view my order history.
 5. View my order history, order confirmations, and saved payment information in my profile.
 6. Be able to update my payment and personal details if required.
+7. Be able to leave a review of a product I've purchased.
+8. Be able to create a blog post.
 
 
 **As a superuser, I want to:**
@@ -140,10 +137,13 @@ The user will see an alert on the screen confirming the message has been sent.
 ### Product page
 The product page displays all products in the store.
 The sorting range button is also displayed here to allow the users sort products based on price, name and category.
+### Blog page
+The blog page will give registered users a chance to creat their own blog posts. The admin will have the power to delete these if they are not deemed
+appropriate.
 ### Product detail page
    The product details page includes, name of the product, price , category, rating and product description.
    There are also two button links one to keep shopping that leads to the all products page and the other add to bag button that adds the product to the user's shopping bag.
-   Admin/ superuser has two links to delete or edit product .
+   Admin/ superuser has two links to delete or edit product. Reviews for each product will be visible at the bottom of the page.
 ### Toasts 
   - Toast message boxes have been used through out the site to display the feedback to the user when they have made interactions with the site. These messages are color coded to transmit different kinds of information:
     - Green: Success
@@ -207,6 +207,10 @@ Wireframes and  Mockups were created in a Balsamiq Workspace with providing a po
   <img src="readme-docs/product-details.png">
 </details>
 <details>
+  <summary>Blog </summary>
+  <img src="readme-docs/blog.png">
+</details>
+<details>
   <summary>Login </summary>
   <img src="readme-docs/login.png">
 </details>
@@ -252,6 +256,10 @@ Wireframes and  Mockups were created in a Balsamiq Workspace with providing a po
 <details>
   <summary>Product Details </summary>
   <img src="readme-docs/product-details-m.PNG">
+</details>
+<details>
+  <summary>Blog </summary>
+  <img src="readme-docs/blog-m.PNG">
 </details>
 <details>
   <summary>Login </summary>
@@ -330,231 +338,182 @@ Wireframes and  Mockups were created in a Balsamiq Workspace with providing a po
 
 ## Deployment
 
-### To contribute to the project
+### Live Website Link
+[HugsForShrubs live site](??)
 
-- Navigate to the Owery Joinery repository page in GitHub https://github.com/PaulWheatcroft/owery-joinery
-- In the top right corner click Fork
-- This creates a copy in your GitHub repository
-- From here you could open in Gitpod or make changes directly in GitHub. Once completed click New Push Request to submit your changes to be merged with the master branch
+### Repository Link
+[github link](https://github.com/Atinos31/Fashionista2)
 
-### Clone and Run Locally
+### Running Code Locally
 
-You can find the clone string for the repository in Code button above the project’s files. Most IDE applications have a GUI interface for cloning a GitHub repository from this string.
+To deploy the project the following is required:-
 
-Alternatively the repository can be cloned from the terminal of your IDE
-- Open the terminal
-- Change the current working directory to the location where you want the cloned directory
-- Type git clone, and then paste the URL you copied earlier. git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-- Press Enter to create the local clone
-Once the clone has completed (through either method) you should see a requirements.txt file in the route of the directory.
-- In the terminal run pip install -r requirements.txt
+- Github account
+- Heroku Account
+- AWS Account
 
-The inbuilt Django sqlite3 database will run as a default until you reconfigure this once deployed to Heroku.
+To create a clone follow the below steps:- 
 
-It’s advisable to set up the DJANGO_SECRET_KEY as an environment variable rather than leave it exposed in settings.py.
+Github
+1. Login to github and find the repository.
+2. Click Code and open with Github Desktop.
+3. Follow the prompts in the GitHub Desktop Application.
 
-### Stripe
+Heroku Deployment with AWS
 
-You will need to configure your payment service provider. This project has been set up using Stripe and that will have installed as part of requirements.txt. This project has used the following environment variables to store the keys necessary to run Stripe and make use of their webhook capability. Further documentation of
+1. Install gunicorn, psycopg2-binary and dj-database-url using the PIP Install command.
+2. Freeze all the requirements for the project into a requirements.txt file using the pip3 freeze > requirements.txt command.
+3. Create a procfile, with the following inside it: web: gunicorn pjc_plant_services_ms4.wsgi:application
+4. Push these changes to GitHub, using git add . git commit -m and git push commands.
+5. Navigate to [Heroku](https://www.heroku.com/), and login or create an account.
+6. Once logged in, click on 'resources'.
+7. From the add-ons search bar, add the Heroku Postgres DB, select the free account, and then submit order form to add it to the project.
+8. From the app's dashboard, click on 'settings', and then 'reveal config vars' in order to set the necessary configuration variables for the project. 
+It should look like this: 
 
-To set up an account got to https://stripe.com/
-- Click start now
-- Create your stripe account
-- Log in and click on Developers
-- Click on API Keys
-- •Create two following variables both in settings.py and the same two variable names in your environment variables.
-    - STRIPE_PUBLIC_KEY
-    - STRIPE_SECRET_KEY
-- Store the Stripe Publishable key in STRIPE_PUBLIC_KEY in the environment variables and link this to your variable in settings.py: STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '') While strictly speaking this isn’t necessary as the key is public it’s still good practice.
-- Store the Stripe Secret key in STRIPE_SECRET_KEY in the environment variables and link this to your variable in settings.py: STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
-- Now click on Webhooks in Stripe
-- Click Add an endpoint
-- When you have configured the endpoint get the Signing secret and store this in another variable STRIPE_WH_SECRET. Again create an environment variable to store the key and link this to the variable in settings.py: STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+| Key                   | Value                      |
+|-----------------------|----------------------------|
+| AWS_ACCESS_KEY_ID     | Your AWS Access Key        |
+| AWS_SECRET_ACCESS_KEY | Your AWS Secret Access Key |
+| DATABASE_URL          | Your Database URL          |
+| EMAIL_HOST_PASS       | Your Email Password        |
+| EMAIL_HOST_USER       | Your Email Address         |
+| SECRET_KEY            | Your Secret Key            |
+| STRIPE_PUBLIC_KEY     | Your Stripe Public Key     |
+| STRIPE_SECRET_KEY     | Your Stripe Secret Key     |
+| STRIPE_WH_SECRET      | Your Stripe WH Key         |
+| USE_AWS               | TRUE                       |
 
-The application has been configured for the UK market. Also in settings.py add the following STRIPE_CURRENCY = 'gbp'
+9. Back on the main dashboard, click on 'deploy', and then under the 'Deployment' method section, select GitHub and 'Automatic Deploys'.
 
-At this point content delivery does not need to be configured as this will be served locally through the standard Django file structure.
-You should now be able to run the website from your local environment.
+10. Ensure that in settings.py, the following code is commented out:
 
-### Deploying to Heroku
+Database
+ https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-- To deploy to Heroku https://www.heroku.com/
-- Log in with your account
-- Select New
-- Then Create new app
-- Give your app a unique name and choose your local region
-- Then click Create app
+and the following code is added:
 
-Once created for the following steps you will need to have access to Settings and to Reveal Config Vars section of your app
-
-### Postgres
-
-This project has been configured using the Heroku Postgres add-on. If you plan on also using this add-on…
-- Go to the resources tab in Heroku.
-- In the Add-ons search bar look for Heroku Postgres and then click on it to select it
-- Choose the Hobby Dev-Free option in plans.
-- Click submit order form.
-
-By clicking on the add-on when displayed on the Resources page you will be taken to the datastores page for the database. Click on settings then View Credentials to get the URI path that will be added to the DATABASE_URL variable (see below
-
-### AWS S3 Bucket
-
-An AWS S3 Bucket is used to store the projects static files. Because of how Django works you will also need to configure external storage when deploying to Heroku. To use AWS
-- Sign up for an AWS account at https://portal.aws.amazon.com/
-- Unless otherwise set this up as a personal account
-- Navigate to the AWS Management Console as Root user
-- Search and click on S3
-- Create a bucket
-- Give your bucket a name and choose a region based on your geographical requirements
-- Uncheck Block all public access to enable public access
-- Acknowledge the current settings
-- Click to create the bucket
-- Open the bucket you created
-- Select Properties tab and turn on static website hosting (bottom of the page)
-    - Edit
-    - Enable
-    - Set Index document to index.html
-    - Set Error document to error.html
-    - Save changes
-- Copy the Amazon Resource Name (ARN)
-- Click on the Permissions tab and navigate to Cross-origin resource sharing (CORS) and add the following
-[
-    {
-        "AllowedHeaders": [
-            "Authorization"
-        ],
-        "AllowedMethods": [
-            "GET"
-        ],
-        "AllowedOrigins": [
-            "*"
-        ],
-        "ExposeHeaders": []
+DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-]
-- In the Bucket Policy click Edit then Policy Generator
-    - This open a separate window
-- Step 1: is S3 Bucket Policy
-- Step 2: add the following settings:
-    - Effect: Allow
-    - Principal: *
-    - Actions: GetObject
-    - ARN: The Amazon Resource Name (ARN)
-- Click on Add Statement.
-- Click on Generate Policy
-- Copy the policy from the popup that appears
-- Paste the generated policy into the Bucket Policy
-- Add '/*' at the end of the Resource key, and save.
-- Navigate to the Access control list (ACL) and select List next to Everyone
+11. Make migrations using the following command:
+python3 manage.py makemigrations
+and migrate the database models to the Postgres database using the following command:
+python3 manage.py migrate
 
-### AWS IAM
+12. New products can be entered via the Django Admin panel or the SQLLite Database can be imported by using the following command
+python3 manage.py loaddata
 
-- Search and click on IAM
-- Staring on the left of the screen navigate to User Groups
-- Create group
-- Give your group a name and click create group
-- Again on the left of the navigate Policies
-    - Create New Policy
-    - JSON tab
-    - Import Managed Policy and search for S3
-    - Select AmazonS3FullAccess and click Import
-- Within "Resource" replace * with your [ARN address and ARN address/]
-"Resource": [
-    "ARN",
-    "ARN/*"
-]
+13. Create a new superuser with the following command:
+python3 manage.py createsuperuser
+and then enter chosen email, username and password.
 
-- Click Next: Tags
-- Click Next: Review and provide a name
-- Click create policy
-- Back on the left-hand side go to User Groups
-    - Open your group
-    - Permissions
-    - Add Permissions
-    - Attach Policies
-    - Search for your policy and add it
-- Back on the left-hand side click Users
-    - Add user
-    - Add a user name
-    - Select Access key - Programmatic access
-    - Click Next
-    - Select your user group
-    - Click Next: Tags then Next: Review then Create User
-    - IMPORTANT THIS IS THE ONLY TIME YOU CAN COMPLETE THIS STEP. Download tHE Download.CSV which contains the information you need for the variables AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY. Create both of these environment variables.
-You can now configure the following in settings.py
-AWS_STORAGE_BUCKET_NAME = 'your bucket name'
-AWS_S3_REGION_NAME = ‘your region’
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+14. In settings.py, contain the previously entered database setting in an if statement, and add an else condition, so that different databases are 
+used depending on the environment.
 
-### Static and media files
-STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-STATICFILES_LOCATION = 'static'
-DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
-MEDIAFILES_LOCATION = 'media'
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
-### Override static and media URLs in production
-STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
-MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+15. Disable 'COLLECTSTATIC' with the fillowing code: heroku config:set DISABLE_COLLECTSTATIC=1
+so that Heroku doesn't attempt to collect the static files.
+16. Add ALLOWED_HOSTS = ['fashionista2.herokuapp.com', 'localhost', '8000'] to settings.py.
+17. Add Stripe environment variables to settings.py.
+18. Push to Heroku using the following command:
+    git push heroku main
 
-### Gmail
+Amazon Web Services:
 
-Email will print to the console unless you set up your own email account.
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = 'your.email@example.com'
+All Static and media files for the deployed version of the site are hosted in a Amazon Web Services(AWS) S3 bucket. 
+In order to create your own bucket, please follow the instructions on the AWS website 
+[Here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html)
 
-For this project Gmail was used. To use Gmail log in to your account and go to
-- All Settings
-- Other Google Account settings
-- Security (new tab opens)
-- Ensure the 2 Step Verification is on
-- Now click on App Password and log in
-- Set App to Mail
-- Device to Other and name it Django
-- A 16-digit number will be generated. Copy this and create the following environment variables
+1. In the gitpod terminal, install boto3 and django-storages using the following commands:
+   pip3 install boto3 and pip3 install django-storages
+2. Freeze the new requirements into the 'requirements.txt' file using the pip3 freeze > requirements.txt command
+3. Add 'storages' to INSTALLED_APPS in settings.py.
+4. Add the following code to settings.py in order to link the AWS bucket to the website:
+
+if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'fashionista2'
+    AWS_S3_REGION_NAME = 'eu-central-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+5. Create a custom_storages.py file in the root level of the project. Inside it, include the locations of the Static Storage and Media Storage.
+6. Delete DISABLE_COLLECTSTATIC from the Heroku Config Variables.
+7. Finally, push to GitHub, and all changes should be automatically pushed to Heroku too.
+
+Making a Local Clone:
+In order to make a local clone of the fashionista website, enter git clone https://github.com/Atinos31/Fashionista2 into the terminal. 
+
+Next, create an .env.py file in the root directory of the project, and add it to the .gitignore file. 
+The following code needs to be added to the .env.py file:
+
+import os  
+os.environ["DEVELOPMENT"] = "True"    
+os.environ["SECRET_KEY"] = "<Your Secret Key>"
+os.environ["STRIPE_PUBLIC_KEY"] = "<Your Stripe Public Key>"    
+os.environ["STRIPE_SECRET_KEY"] = "<Your Stripe Secret Key>"    
+os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"   
+
+Then make sure that the required packages are installed by running the following command: 
+pip install -r requirements.txt
+
+Make migrations and then migrate in order to create a database, by running the following commands:
+python3 manage.py makemigrations and python3 manage.py migrate.
+
+New products can be entered via the Django Admin panel or the SQLLite Database can be imported by using the following command
+python3 manage.py loaddata
+
+Create a superuser with the following command: python3 manage.py createsuperuser and entering your email, username and password.
+
+Run the app by entering the following command:
+python3 manage.py runserver
+
+[Back to top ⇧](#table-of-contents)
+
+## Credits 
+
+### Images
+### Code 
+I consulted the following sites to better understand some elements of code:
+- [Stack Overflow](https://stackoverflow.com/ "Link to Stack Overflow page")
+- [W3Schools](https://www.w3schools.com/ "Link to W3Schools page")
+- [Bootstrap](https://getbootstrap.com/ "Link to BootStrap page")
 
 
-EMAIL_HOST_PASS *with the 16-digit code*
-EMAIL_HOST_USER *your Gmail account*
-DEFAULT_FROM_EMAIL *your applications email address*
+## Acknowledgements
 
-The following can now be configured in settings.py
+- I would like to thank my friends and family for their time and opinions on the website.
+- I would like to thank my mentor, Seun, for her help and constructive feedback throughout the project.
+- I would like to thank the tutors for their guidance on issues throughout the project.
+- I would like to thank my girlfriend Orla for her constant support and opinions throughout.
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
-DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
-
-### Heroku Config Vars
-
-To recap the Heroku app’s Config Vars should be
-
-DJANGO_SECRET_KEY
-STRIPE_PUBLIC_KEY
-STRIPE_SECRET_KEY
-STRIPE_WH_SECRET
-AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY
-USE_AWS
-DATABASE_URL
-EMAIL_HOST_PASS
-EMAIL_HOST_USER
-DEFAULT_FROM_EMAIL
-
-You should now add
-
-USE_AWS = True
-DISABLE_COLLECTSTATIC = 0
-
-### Deploy
-
-You can now deploy the application from your GitHub repository. In Heroku
-- Deploy and click on Connect to GitHub
-- Authenticate to your GitHub repositories and select the correct GitHub repository for this project.
-- Click on Deploy Branch to make the application available publicly through Heroku
-
-This will take several  minutes as Heroku installs the components outlined in requirements.txt. Once complete the app is ready to be opened.
+[Back to top ⇧](#table-of-contents)
