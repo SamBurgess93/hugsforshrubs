@@ -12,10 +12,14 @@ HugsForShrubs is a virtual 'E-commerce Website’ in which customers can purchas
     1. [Project Goals](#project-goals)
     2. [User Stories](#user-stories)
     3. [Development Planes](#development-planes)
-    4. [Changes Made During Project Development](#changes-made-during-project-development)
-2. [Technologies Used](#technologies-used)
-3. [Database Schema](#database-schema)
+    4. [Features left to Implement](#features-left-to-implement)
+    5. [Changes Made During Development](#changes-made-during-development)
+2. [Database Schema](#database-schema)
+3. [Technologies Used](#technologies-used)
 4. [Testing](#testing)
+    1. [Validation](#validation)
+    2. [Testing User Stories](#testing-user-stories)
+    3. [Known Bugs](#known-bugs)
 5. [Deployment](#deployment)
 6. [Credits](#credits)
      1. [Images](#images)
@@ -33,7 +37,6 @@ The primary goal of the HugsForShrubs website is engage with visitors to the web
 
 
 ### User Stories
-
 
 **As a first time visitor, I want to:**
 
@@ -71,15 +74,15 @@ The primary goal of the HugsForShrubs website is engage with visitors to the web
 3. Delete items from the store.
 
 
-### Development Planes
+## Development Planes
 
 In order to design and create Hugs For Shrubs, I developer distinguished the required functionality of the site and how it would answer the user stories, as described above, using the **Five Development Planes**:
 
-## <strong>1. <u>Strategy</u></strong>
+### <strong>1. <u>Strategy</u></strong>
 
 The Hugs For Shrubs is an online e-commerce site with front-end and back-end functionality, developed using HTML, JavaScript, CSS, Python and Django. The main objective is to create a site delivers on the user stories outlined above.
 
-## <strong>2. <u>Scope</u></strong>
+### <strong>2. <u>Scope</u></strong>
 
 The scope was created from using the Strategy previously defined. This allowed us to align the features to deliver on the strategy/ user stories. This was seperated into two categories:
 - **Content Requirements**
@@ -98,17 +101,17 @@ The scope was created from using the Strategy previously defined. This allowed u
           - Register for profile
           - Get contact details for owner
 
-## <strong>3. <u>Structure</u></strong>
+### <strong>3. <u>Structure</u></strong>
 
-### Allauth features
+#### Allauth features
 The sign up, register, password reset, email confirmation pages etc, have all been provided by Django allauth and formatted to suit the needs of the site.
 
-#### Admin Features
+##### Admin Features
   - Admin will have access to additional features across the site. Firstly admin members will have an additional icon in the delivery banner (on larger devices) or link in the burger menu (on smaller devices) to take the user to the site admin page. Here the admin user will have access to:
     - Add a product page link - This will take the admin user to the add product page. Here the user can fill in the form to add a product to the site. Once added the admin user will be taken to the product detail page for the product added.
     - On the product page and product detail page admin users will have access to the edit and delete products. The edit icon will take the user to the edit product form, where they can make changes to a product (i.e chnage the price). The delete icon will trigger a modal to make sure the user wishes to delete the product and avoid accidental deletions.
 
-### Base Template
+#### Base Template
 * Delivery Banner - The delivery banner contains information about free delivery and the free delivery threshold. It is fixed to the top of the screen to allow for ease of access and improved user navigation. The links take users to different parts of the site which are as follows:
  - Unregistered user:
    - Login link
@@ -117,41 +120,41 @@ The sign up, register, password reset, email confirmation pages etc, have all be
    - Saved Items
    - My Account - Profile, Logout
    - Shopping Bag
- - Admin/ superuser
    - Wishlist
-   - My Account - Product Management, Profile, Logout
+ - Admin/ superuser
+   - Product Management
 
-### Navbar
+#### Navbar
 The navbar has all product category links,
 - All Products - here products may be sorted and selected based on price, name, rating or category
 - Errigal - Errigal type plant hangers
 - Eske - Eske Type plant hangers 
 
-### Footer
-The footer has the links to the social media links and contains the contact email information.
+#### Footer
+The footer has the links to the social media links.
 
-### Homepage
+#### Homepage
 The home page has the navigation links, logo, hero image, call to action button, product categories and the footer.
-### About Me
+#### About Me
 The about page gives the user a short background on Hugs For Shrubs. This will also contain a contact form and a submit button.
 The user will see an alert on the screen confirming the message has been sent.
-### Product page
+#### Product page
 The product page displays all products in the store.
 The sorting range button is also displayed here to allow the users sort products based on price, name and category.
-### Blog page
+#### Blog page
 The blog page will give registered users a chance to creat their own blog posts. The admin will have the power to delete these if they are not deemed
 appropriate.
-### Product detail page
+#### Product detail page
    The product details page includes, name of the product, price , category, rating and product description.
    There are also two button links one to keep shopping that leads to the all products page and the other add to bag button that adds the product to the user's shopping bag.
    Admin/ superuser has two links to delete or edit product. Reviews for each product will be visible at the bottom of the page.
-### Toasts 
+#### Toasts 
   - Toast message boxes have been used through out the site to display the feedback to the user when they have made interactions with the site. These messages are color coded to transmit different kinds of information:
     - Green: Success
     - Red : Errors
     - Blue : Information
     - Yellow : Warning
-### Shopping Bag  page
+#### Shopping Bag  page
   The shopping bag page can be broken into 5 parts for each product added to their cart:
   - Product - which displays an image of the product the user has added to their bag.
   - Product info - displays the name of the product and product sku. 
@@ -161,7 +164,7 @@ appropriate.
 Underneath the products that are in the user's cart, there is information for cart total, delivery and grand total. If a user does not meet the free delivery threshold a helpful message will be displayed to let them know what they need to spend in order to qualify for free delivery.
   - There is a button to take the users back to the all product page, and a "Secure Checkout" button to take the user to the checkout page.
   - If the user has no items in the shopping cart, a message is displayed to the user to let them know this and a button to take the user to the all products page is displayed.
-### Checkout page
+#### Checkout page
 The Checkout page is split into two columns on larger devices, and 2 rows on smaller devices:
  - Order Summary - Gives a nice overview of each of the products that they are purchasing. Users can also see a breakdown of the order total, delivery and grand total.
  - Checkout Form - split into 3 sections:
@@ -169,21 +172,21 @@ The Checkout page is split into two columns on larger devices, and 2 rows on sma
    - Delivery - Users can fill in where they wish their products to be delivered to. These fields will be auto populated if a user has logged in and saved this information to their profile.
    - Payment - Users can enter their card details here in order to make payments and purchase their chosen products.
  - Below the checkout form, users can click the "Adjust bag" button to make adjustments to their shopping bag, or click the "Complete Order" button to make their purchases. Users are informed exactly how much they will be charged with a helpful message directly underneath the "Complete Order" button.
- ### Checkout success page
+ #### Checkout success page
  - When a user successfully checks out a success toast will be shown to the user with the order number and a confirmation email will be sent to the user with some of the details of their order.
  - The checkout success page itself is split into two sections:
    - Order information which details the order info, delivery details and billing info.
    - Order Summary - Gives a nice overview of each of the products that they are purchasing.
  - More products link which will take the user back to the all products page encouraging the user to make more purchases.
 
- ### Profile page
+ #### Profile page
    - Here users can update their default information by filling in the form and clicking update info button allowing them to make quick purchases at checkout.
    - Regarding information aboutuser's past orders, users can click the order number to take them to the checkout success page .
- ### Saved Items
+ #### Saved Items
   - The wishlists app allows signed-in users to create a list of saved Items. A user can add a product to their wishlist from the product detail page and manage their lists in the account section.
   - When the used has added products to their wishlist ; they will be displayed here in the same format as the products page.
 
-### Features left to implement
+
 <br/>
 
 ## <strong>4. <u>Skeleton</u></strong>
@@ -318,8 +321,12 @@ Wireframes and  Mockups were created in a Balsamiq Workspace with providing a po
 
 [Back to top ⇧](#table-of-contents)
 
+## Changes made during development
+
+## Features left to implement
+
 ## Database Schema
-![Database Schema](/readme-docs/database-drawing.PNG)
+![Database Schema](readme-docs/database-drawing.png)
 
 ## Technologies Used
 
@@ -339,6 +346,28 @@ Wireframes and  Mockups were created in a Balsamiq Workspace with providing a po
 - [Bootstrap](https://getbootstrap.com/) - Used for responsiveness
 - [Font Awesome](https://fontawesome.com/) - Used for icons such as footer
 - [Balsamiq](https://balsamiq.com/) - Used for mockups ad wireframes
+
+[Back to top ⇧](#table-of-contents)
+
+## Testing.
+Bugs identified during development and testing and their solutions are recorded [here](/media/hugsforshrubsbugs.png).
+### Validation
+- Because of the issues with trying to vailate code that uses jinja templating pages were tested by direct input of source code into [validator.w3.org](https://validator.w3.org/). The results of this can be seen [here](/media/htmlvalidation.png). 
+- CSS code from the css files in  static and checkout were tested by direct input into [jigsaw.w3.org](https://jigsaw.w3.org/css-validator/) until it got a 'Congratulations! No error found!' message.
+- JavaScript in checkout/js/stripe_elements.js, profile/static/profile/js/countryfield.js and gins/templates/gins/includes/quantity_input_script were checked using [jshint](https://jshint.com/). There were no errors and the warnings were checked, corrected where possible and otherwise left. Given more time more of these warnings might be rectified.
+- Throughout development Python code was tested with [flake 8](https://flake8.pycqa.org/en/latest/) and problems identified were corrected where possible. [PEP8 online](http://pep8online.com/) was used to help formatting. Some lines that did not comply with PEP8 due to being too long were left if they could not be made PEP8 compliant withour breaking the code. These were mainly in settings.py and migrations but there were some lines that, when corrected in PEP 8 online, no longer worked in the code. These occurred in checkout's webhook_handler.pyand webhooks.py,  and in widgets.py in gins and distilleries.
+- Lighthouse Audits. The site’s Performance, Accessibility, Best Practices and SEO were assessed by [Chrome Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) and the results of this are [here](/media/lighthousereport.png).
+- Manual Testing. At every step of development the errors highlighted in the code were addressed before proceeeding.
+The app was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
+It was viewed on a variety of devices. Friends and family members reviewed the site to identify bugs and give feedback on user experience. The code was submitted for peer-review in Code Institute's peer-code-review channel in [slack.com](https://app.slack.com/). 
+### Testing User Stories
+#### All users should be able to
+
+#### In addition registered users should be able to
+
+
+### Known Bugs
+
 
 ## Deployment
 
