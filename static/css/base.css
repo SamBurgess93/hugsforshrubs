@@ -13,10 +13,12 @@ body{
 /* Navbar */
 #topnav, .navbar {
     background-color: #B69DE8;
+    font-family: 'Shrikhand';
 }
 
 #delivery-banner {
     background-color: #74C29E;
+    font-family: 'Shrikhand';
 }
 
 
@@ -36,7 +38,8 @@ footer {
 }
 
 .call-text {
-    color: #f5e5c6 ;
+    color: #74C29E;
+    font-family: 'Shrikhand';
 	text-shadow:
 		-1px -1px 0 #000,
 		1px -1px 0 #000,
@@ -65,6 +68,7 @@ footer {
     background: #B69DE8;
     color: #F4F4E2;
     min-width: 260px;
+    font-family: 'Shrikhand';
 }
 
 .btn-black {
