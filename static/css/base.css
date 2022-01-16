@@ -59,6 +59,7 @@ footer {
     background-color: #B69DE8;
     width: 100%;
     position: relative;
+    margin-top:auto; 
 }
 
 .wrapper {
@@ -77,6 +78,11 @@ footer {
 		1px -1px 0 #000,
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
+}
+
+/*div added to empty bag to push down footer*/
+.space-maker{
+    height: 400px;
 }
 
 /* from Bulma */
