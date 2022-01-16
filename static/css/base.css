@@ -27,10 +27,32 @@ body{
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: #F4F4E2;
+	background: #FCD5E5;
 	z-index: -1;
 }
 
+/* Text */
+
+.text-cream {
+    color: #F4F4E2 !important;
+}
+
+.header-text {
+    font-family: Shrikhand;
+    color: #F4F4E2 !important;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+
+
+/* Product Card */
+.card-body {
+    font-family: Shrikhand;
+}
 
 /* Footer */
 footer {
@@ -106,9 +128,7 @@ footer {
     color: white;
 }
 
-.text-cream {
-    color: #F4F4E2 !important;
-}
+
 
 .border-black {
     border: 1px solid black !important;
