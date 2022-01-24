@@ -6,6 +6,7 @@ from .models import Product, Category
 from django.db.models.functions import Lower
 from .forms import ProductForm
 
+
 # Create your views here.
 
 def all_products(request):
@@ -136,3 +137,5 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
