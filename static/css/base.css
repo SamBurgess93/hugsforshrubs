@@ -85,6 +85,12 @@ footer {
     height: 400px;
 }
 
+/* Reviews */
+
+.notification.space-below {
+    margin-bottom: 20px;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
