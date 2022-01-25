@@ -40,6 +40,5 @@ class ProductReview(models.Model):
     user = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE)
     title = models.CharField(max_length=200, null=True, blank=True)
     body = models.CharField(max_length=1000, null=True, blank=True)
-    stars = models.IntegerField()
     firstcreated = models.DateTimeField(auto_now_add=True)
     lasteditted = models.DateTimeField(auto_now=True)

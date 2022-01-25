@@ -91,6 +91,85 @@ footer {
     margin-bottom: 20px;
 }
 
+/* Blog */
+
+/* Blog intro text */
+
+.blog-headline {
+	text-align: center;
+}
+
+.blog-text {
+	padding-top: 30px;
+	text-align: center;
+}
+
+.create-post-btn {
+	text-align: center;
+	color: #FFFFFF;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+.registered-users {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+/* Blog posts */
+
+.page-heading {
+	margin-bottom: 20px;
+	margin-top: 0px;
+	text-align: center;
+}
+
+.blog-title {
+	font-family: architects daughter;
+}
+
+.blog-image {
+    height: 500px;
+    width: 500px;
+    padding-bottom: 50px;
+}
+
+.read-more {
+	margin-bottom: 20px;
+}
+
+.preferred-size {
+	font-style: italic;
+	color: grey;
+	font-size: 13px;
+}
+
+.create-form {
+	width: 100%;
+	max-width: 100%;
+	padding: 15px;
+	margin-top: 140px;
+}
+
+.form-group1 {
+	margin-bottom: 20px;
+}
+
+.add-bp {
+	font-family: lato;
+	font-weight: 300;
+}
+
+.card {
+	max-width: 700px;
+}
+
+.card-body {
+	padding: 20px;
+}
+
+
 /* from Bulma */
 .icon {
     align-items: center;

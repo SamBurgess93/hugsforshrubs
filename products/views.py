@@ -65,16 +65,13 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
-    # Add review 
-
-    if request.method == 'POST'and request.user.is_authenticated:
-        stars = request.POST.get('stars', 3)
+    if request.method == 'POST' and request.user.is_authenticated:
+        title = request.POST.get('title','')
         body = request.POST.get('body','')
 
-        review = ProductReview.objects.create(product=product, user=request.user, stars=stars, body=body)
-
-        return redirect(request, 'products/product_detail.html')
-    #
+        review = ProductReview.objects.create(product=product, user=request.user, title=title, body=body)
+    
+        return redirect (reverse('product_detail', args=[product.id]))
 
     context = {
         'product': product,
@@ -148,5 +145,4 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
-
 

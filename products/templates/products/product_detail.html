@@ -108,8 +108,7 @@
                     review</a>
             </small>
             {% endif %}
-            <p class="mt-2 mb-0 small font-weight-bold">Posted by: {{ review.username}}</p>
-            <p class="mt-2 mb-0 small font-weight-bold">Posted by: {{ review.stars}}</p>
+            <p class="mt-2 mb-0 small font-weight-bold">Posted by: {{ review.user}}</p>
             <p class="mb-0 small">First posted on: {{ review.firstcreated }}</p>
             <p class="small">Last editted on : {{ review.lasteditted }}</p>
             <hr class="w-25">
@@ -123,20 +122,12 @@
             {% if request.user.is_superuser or review.username == request.user %}
                 <form method="post" action=".">
                     {% csrf_token %}
-
                     <div class="field">
-                        <label >Stars</label>
+                        <label for="">Title</label>
                         <div class="control">
-                            <div class="select">
-                                <select name="stars" id="">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3" selected>3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
+                            <textarea class="textarea"name="title" id="" cols="30" rows="1"></textarea>
                         </div>
+
                     </div>
                     <div class="field">
                         <label for="">Body</label>
@@ -150,7 +141,7 @@
                             <button class ="btn btn-black rounded-0 text-uppercase mt-5">Add</button>
                         </div>
                     </div>
-                </form>
+                </form> 
             {% else %}
              <p> Please sign in to add review! </p>
             {% endif %}
