@@ -2,9 +2,9 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
-from .models import Product, Category, ProductReview
+from .models import Product, Category, Review
 from django.db.models.functions import Lower
-from .forms import ProductForm
+from .forms import ProductForm, ReviewForm
 
 
 # Create your views here.
@@ -64,17 +64,11 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-
-    if request.method == 'POST' and request.user.is_authenticated:
-        title = request.POST.get('title','')
-        body = request.POST.get('body','')
-
-        review = ProductReview.objects.create(product=product, user=request.user, title=title, body=body)
-    
-        return redirect (reverse('product_detail', args=[product.id]))
+    reviews = product.reviews.all()
 
     context = {
         'product': product,
+        'reviews': reviews,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -146,3 +140,70 @@ def delete_product(request, product_id):
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
 
+
+def all_reviews(request):
+    """The view to show all reviews and sorting functionality"""
+
+    reviews = Review.objects.all()
+    sort = None
+    direction = None
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'username':
+                sortkey = 'username__username'
+                reviews = reviews.annotate(
+                    lower_username=Lower('username__username'))
+            if sortkey == 'product':
+                sortkey = 'product__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            reviews = reviews.order_by(sortkey)
+
+    current_sorting = f'{sort}_{direction}'
+
+    context = {
+        'reviews': reviews,
+        'current_sorting': current_sorting,
+    }
+
+    return render(request, 'products/product_detail.html', context)
+
+
+@login_required
+def add_review(request, product_id):
+    """The view to add a review to the site"""
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.username = request.user
+            review.product = product
+            review.save()
+            messages.success(request, 'You added a new review!')
+            return redirect(
+                reverse('product_detail', args=[product.id])
+            )
+
+        else:
+            messages.error(
+                request, 'This review was not added. ' +
+                'Please check the form is valid.'
+                )
+    else:
+        form = ReviewForm()
+
+    template = 'products/add_review.html'
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, template, context)

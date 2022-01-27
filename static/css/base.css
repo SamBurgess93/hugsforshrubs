@@ -195,13 +195,13 @@ footer {
 }
 
 .btn-black {
-    background: black;
-    color: white;
+    background: #B69DE8;
+    color: #F4F4E2;
 }
 
 .btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    background: #F4F4E2;
+    color: #B69DE8 !important; /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
