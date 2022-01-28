@@ -104,10 +104,10 @@
         <p class="mb-0 lead font-weight-bold">{{ review.title }}</p>
         <p class="text-justified">{{ review.body }}</p>
         {% if request.user.is_superuser or review.username == request.user %}
-        <small>
-            <a href="{% url 'edit_review' review.id %}" class="btn-black btn-sm rounded-0">Edit
-                review</a>
-        </small>
+            <small class="ml-3">
+                <a href="{% url 'edit_review' review.id %}">Edit</a> | 
+                <a class="text-danger" href="{% url 'delete_review' review.id %}">Delete</a>
+            </small>
         {% endif %}
         <p class="mt-2 mb-0 small font-weight-bold">Posted by: {{ review.username}}</p>
         <p class="mb-0 small">First posted on: {{ review.firstcreated }}</p>
