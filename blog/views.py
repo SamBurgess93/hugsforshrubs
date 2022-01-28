@@ -76,6 +76,36 @@ def edit_blog_view(request, slug):
     context['form'] = form
     return render(request, 'blog/edit_blog.html', context)
 
+@login_required
+def edit_blog(request, blog_id):
+    """ Edit a blog """
+
+    blog = get_object_or_404(BlogPost, pk=blog_id)
+
+    if request.method == 'POST':
+        form = UpdateBlogPostForm(request.POST, instance=blog)
+        # check if form is valid
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated blog post!')
+            return redirect(reverse('blog',
+                                    args=[blog.id]))
+        # form is not valid
+        else:
+            messages.error(request, 'Failed to update product review.' +
+                           'Please ensure the form is valid.')
+    # get form
+    else:
+        form = UpdateBlogPostForm(instance=blog)
+        messages.info(request, 'You are editing your review')
+
+    template = 'blog/edit_blog.html'
+    context = {
+        'form': form,
+        'blog': blog,
+    }
+
+    return render(request, template, context)
 
 def get_blog_queryset(query=None):
     queryset = []
@@ -101,3 +131,5 @@ def all_blog_posts(request):
     }
 
     return render(request, "blog/blog.html", context)
+
+

@@ -11,5 +11,5 @@ urlpatterns = [
     path('', all_blog_posts, name="blog"),
     path('create/', create_blog_view, name="create"),
     path('<slug>/', detail_blog_view, name="detail"),
-    path('<slug>/edit/', edit_blog_view, name="edit"),
+    path('edit_blog/<int:blog_id>', edit_blog_view, name="edit"),
 ]

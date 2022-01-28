@@ -308,6 +308,49 @@ footer {
     overflow-y: auto;
 }
 
+/* About Page */
+
+.about-container {
+    color: #343735;
+    align-items: center;
+    text-align: center;
+    min-height: calc(100vh - 56px);
+}
+
+.about-header {
+    margin-top: 20px;
+    margin-bottom:20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.gym-para {
+    font-size: 20px;
+    font-family: "expo";
+}
+
+.gym-subheading {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.about-icon {
+    font-size : 40px;
+}
+
+.online-train-img {
+  background: url('/media/online-training.jpg');
+  background-size: cover;
+  background-color: dimgrey;
+  margin-top: 20px;
+  object-fit: cover;
+}
+
+.image-container {
+    object-fit: cover; 
+}
 
 /* -------------------------------- Media Queries */
 

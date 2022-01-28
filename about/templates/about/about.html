@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="overlay"></div>  
+<div class="container about-container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="about-header header-text"> A hobby born out of lockdown </h2>
+            <p class="gym-para">With 200 clubs and almost 330,00 active members, we are one of Sweden's largest wellness
+                chains.
+                It gives us opportunities to constantly develop our gyms and to be at the forefront when it comes to
+                training methods, equipment, staff and not least price.
+                We will continue to be the people's best alternative in exercise and health - where everyone should feel
+                at home.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h2 class="gym-header">Why Hug for Shrubs?</h2>
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-12 col-md-6 col-lg-4 feature">
+            <i class=" about-icon fas fa-solid fa-recycle"></i>
+            <h3 class="gym-header">Sustainable Packaging</h3>
+            <p class="gym-para">
+                Exercise when it suits you. Our gyms are open 24 hours a day
+                so you can work out when you have time.
+            </p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 feature">
+            <i class="about-icon fas fa-user-friends gym-icon"></i>
+            <h3 class="gym-header">All Age</h3>
+            <p class="gym-para">
+                With us, everyone is welcome. And we like freedom of choice.We
+                welcome all age group people under one roof.
+            </p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 feature">
+            <i class="about-icon fas fa-wallet gym-icon"></i>
+            <h3 class="gym-header">Best Price</h3>
+            <p class="gym-para">
+                We think that everyone should have the opportunity to live a
+                healthy life. Not just those with beefy wallets.
+            </p>
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-12 col-md-6 online-train-img"></div>
+        <div class="col-12 col-md-6">
+            <h2 class="gym-header text-uppercase">Train at home</h2>
+            <h3 class="gym-header" style="text-transform:capitalize;">Training online for everone</h3>
+            <p class="gym-para">Everyone is different and we want to offer online training that suits everyone,
+                regardless of
+                who you are and what your goals are, member or non-member. We have put together a
+                number of different exercises and sessions with different orientations -choose yourself if you
+                want to focus on one session or if you want to combine several in a row.</p>
+            <a href="{% url 'account_signup' %}" class="btn btn-green btn-ls text-uppercase">register now</a>
+        </div>
+    </div>
+    <div class="row bg-col my-5">
+        <div class="col-12">
+            <h2 class="gym-header">train safely with us</h2>
+            <p class="gym-para">All our gyms are open 24 hours a day, just as usual,
+                but with a limited number of places. We have also taken several measures
+                against Covid-19, in accordance with the Swedish Public Health Agency's recommendations
+                so that you can feel safe when you train with us.</p>
+            <a href="https://www.thelocal.com/20210309/coronavirus-what-are-swedens-new-rules-for-shops-malls-and-gyms/"
+                target="_blank" rel="noopener" class="btn btn-green btn-ls logo-font">read more</a>
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-12">
+            <h2 class="gym-header">exercise & health</h2>
+            <p class="gym-para">Feeling good and feeling strong is not just about how hard you train
+                or how many hours you spend at the gym.Diet and food are at least as important for
+                the body's well-being. If you both exercise and eat right,you will quickly feel how
+                your whole body feels good - inside and out.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

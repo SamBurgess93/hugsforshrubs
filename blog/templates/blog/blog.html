@@ -27,11 +27,16 @@
             <div class="blog-body">
                 <!-- Post title -->
                 <h2 class="blog-title text-uppercase">{{ post.title }}</h2>
+                {% if request.user.is_superuser or review.username == request.user %}
+                    <small class="ml-3">
+                        <a href="{% url 'edit_blog' blog.id %}">Edit</a> | 
+                    </small>
+                {% endif %}
                 <p class="blog-author text-muted h6">By {{ post.author }} | {{ post.date_published |date:'D d M Y'}}</p>
                 <!-- Post body collapsed -->
                 <p>{{post.body|slice:":200" }}...</p>
                 <!-- Read more btn -->
-                <a class="btn btn-primary read-more" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="btn btn-primary read-more btn-black" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                     Read More &rarr;
                 </a>
                 <br>
