@@ -105,7 +105,7 @@
         <p class="text-justified">{{ review.body }}</p>
         {% if request.user.is_superuser or review.username == request.user %}
         <small>
-            <a href="" class="btn-black btn-sm rounded-0">Edit or delete this
+            <a href="{% url 'edit_review' review.id %}" class="btn-black btn-sm rounded-0">Edit
                 review</a>
         </small>
         {% endif %}

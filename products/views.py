@@ -207,3 +207,34 @@ def add_review(request, product_id):
     }
 
     return render(request, template, context)
+
+@login_required
+def edit_review(request, review_id):
+    """ Edit a review of a product """
+
+    review = get_object_or_404(Review, pk=review_id)
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=review)
+        # check if form is valid
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated product review!')
+            return redirect(reverse('product_detail',
+                                    args=[review.id]))
+        # form is not valid
+        else:
+            messages.error(request, 'Failed to update product review.' +
+                           'Please ensure the form is valid.')
+    # get form
+    else:
+        form = ReviewForm(instance=review)
+        messages.info(request, 'You are editing your review')
+
+    template = 'products/edit_review.html'
+    context = {
+        'form': form,
+        'review': review,
+    }
+
+    return render(request, template, context)
