@@ -31,6 +31,10 @@ body{
 	z-index: -1;
 }
 
+.text-info {
+    color: #63C49C!important;
+}
+
 /* Text */
 
 .text-cream {
