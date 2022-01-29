@@ -219,8 +219,8 @@ footer {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
-    color: white;
+    background: #74C29E;
+    color: #F4F4E2;
 }
 
 
@@ -344,8 +344,8 @@ footer {
     font-size : 40px;
 }
 
-.online-train-img {
-  background: url('/media/online-training.jpg');
+.orla-about-img {
+  background: url('/media/orla-about.png');
   background-size: cover;
   background-color: dimgrey;
   margin-top: 20px;

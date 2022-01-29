@@ -16,7 +16,7 @@
             <h2 class="logo-font header-text">Blog</h2>
             <hr class="w-50 mb-1">
              <!-- Create post btn -->
-             <div class="create-post-btn"> <a href="{% url 'create' %}" class="btn btn-dark text-uppercase">Create your blog post</a> </div>
+             <div class="create-post-btn"> <a href="{% url 'create' %}" class="shop-now-button btn btn-lg rounded-pill text-uppercase py-3">Create your blog post</a> </div>
         </div>
     </div>
     <br>
@@ -27,22 +27,18 @@
             <div class="blog-body">
                 <!-- Post title -->
                 <h2 class="blog-title text-uppercase">{{ post.title }}</h2>
-                {% if request.user.is_superuser or review.username == request.user %}
-                    <small class="ml-3">
-                        <a href="{% url 'edit_blog' blog.id %}">Edit</a> | 
-                    </small>
-                {% endif %}
+
                 <p class="blog-author text-muted h6">By {{ post.author }} | {{ post.date_published |date:'D d M Y'}}</p>
                 <!-- Post body collapsed -->
                 <p>{{post.body|slice:":200" }}...</p>
                 <!-- Read more btn -->
-                <a class="btn btn-primary read-more btn-black" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="btn read-more btn-black" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                     Read More &rarr;
                 </a>
                 <br>
                 <div class="collapse" id="collapseExample">
                     <!-- Post body uncollapsed -->
-                    <div class="blog-body">
+                    <div class="read-more blog-body">
                         {{ post.body }}
                     </div>
                 </div>
@@ -55,5 +51,5 @@
         {% endfor %}
     </div>
 </div>
-<div class="space-maker"></div>
+
 {% endblock %}
