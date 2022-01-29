@@ -130,7 +130,7 @@ footer {
 }
 
 .blog-title {
-	font-family: architects daughter;
+	font-family: 'Cardo';
 }
 
 .blog-image {
@@ -325,16 +325,15 @@ footer {
     margin-top: 20px;
     margin-bottom:20px;
     font-size: 30px;
-    font-weight: bold;
     text-transform: uppercase;
 }
 
-.gym-para {
+.about-para {
     font-size: 20px;
     font-family: "expo";
 }
 
-.gym-subheading {
+.about-subheading {
     margin-top: 20px;
     font-size: 30px;
     font-weight: bold;
