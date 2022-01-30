@@ -1,30 +1,12 @@
 # HugsForShrubs
 
-![Preview](???)
+![Preview](readme-docs/responsive.PNG)
 
 [Link to the Live Project](https://hugs-for-shrubs.herokuapp.com/)
 
 HugsForShrubs has been built as the 4th milestone project as part of Code Institute's Full Stack Software Development course.
 HugsForShrubs is a virtual 'E-commerce Website’ in which customers can purchase and browse Macrame plant hangers. It provides the user with a list of the various products available for purchase in the store. For the convenience of online shopping, a shopping cart is provided to the user. After the selection of the goods, it is sent to the order confirmation process for collection of payment. The system is implemented using Python’s web framework Django.
 
-## Table of contents
-1. [UX](#ux)
-    1. [Project Goals](#project-goals)
-    2. [User Stories](#user-stories)
-    3. [Development Planes](#development-planes)
-    4. [Features left to Implement](#features-left-to-implement)
-    5. [Changes Made During Development](#changes-made-during-development)
-2. [Database Schema](#database-schema)
-3. [Technologies Used](#technologies-used)
-4. [Testing](#testing)
-    1. [Validation](#validation)
-    2. [Testing User Stories](#testing-user-stories)
-    3. [Known Bugs](#known-bugs)
-5. [Deployment](#deployment)
-6. [Credits](#credits)
-     1. [Images](#images)
-     2. [Code](#code)
-7. [Acknowledgements](#acknowledgements)
 ***
 
 ## UX 
@@ -103,7 +85,7 @@ The scope was created from using the Strategy previously defined. This allowed u
 #### Allauth features
 The sign up, register, password reset, email confirmation pages etc, have all been provided by Django allauth and formatted to suit the needs of the site.
 
-##### Admin Features
+#### Admin Features
   - Admin will have access to additional features across the site. Firstly admin members will have an additional icon in the delivery banner (on larger devices) or link in the burger menu (on smaller devices) to take the user to the site admin page. Here the admin user will have access to:
     - Add a product page link - This will take the admin user to the add product page. Here the user can fill in the form to add a product to the site. Once added the admin user will be taken to the product detail page for the product added.
     - On the product page and product detail page admin users will have access to the edit and delete products. The edit icon will take the user to the edit product form, where they can make changes to a product (i.e chnage the price). The delete icon will trigger a modal to make sure the user wishes to delete the product and avoid accidental deletions.
@@ -318,9 +300,23 @@ Wireframes and  Mockups were created in a Balsamiq Workspace with providing a po
 
 [Back to top ⇧](#table-of-contents)
 
-## Changes made during development
-
 ## Features left to implement
+
+**With more time I would have liked to implement the following and they may be implemented in the future.**
+
+- Allow users to like/comment on blogs post.
+- Allow users to like/comment on reviews.
+- Add video to blog posts.
+- Add feature to display most liked, most commented on blogs.
+- Give users the ability to rate the products.
+- Add favourites functionality.
+- Add a wishlist.
+- Profile notifications when theres a comment/like on a post or review on a product
+- Share on social media
+- Log in with social media
+- Adding a points system where repeat buyers can accumulate points and use those points for discounts.
+- Add pagination to products page.
+- Have a product total amount so a product can be listed as 'currently sold out'.
 
 ## Database Schema
 ![Database Schema](readme-docs/database-drawing.png)
@@ -351,15 +347,14 @@ Wireframes and  Mockups were created in a Balsamiq Workspace with providing a po
 
 Testing section is located here [testing.md file](/testing.md)
 
-[Back to top ⇧](#table-of-contents)
 
 ## Deployment
 
 ### Live Website Link
-[HugsForShrubs live site](??)
+[HugsForShrubs live site](https://hugs-for-shrubs.herokuapp.com/)
 
 ### Repository Link
-[github link](https://github.com/Atinos31/Fashionista2)
+[github link](https://github.com/SamBurgess93/hugsforshrubs)
 
 ### Running Code Locally
 
@@ -488,7 +483,7 @@ if 'USE_AWS' in os.environ:
 7. Finally, push to GitHub, and all changes should be automatically pushed to Heroku too.
 
 Making a Local Clone:
-In order to make a local clone of the fashionista website, enter git clone https://github.com/Atinos31/Fashionista2 into the terminal. 
+In order to make a local clone of the fashionista website, enter git clone https://github.com/SamBurgess93/hugsforshrubs into the terminal. 
 
 Next, create an .env.py file in the root directory of the project, and add it to the .gitignore file. 
 The following code needs to be added to the .env.py file:

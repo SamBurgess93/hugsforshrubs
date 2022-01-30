@@ -257,3 +257,81 @@ Files below showing the lines that did not pass as it would break the code (from
 </details>
 
 <br>
+
+## Google Lighthouse
+
+All pages passed through Lighthouse in Chrome DevTools:
+
+<br>
+
+<details>
+  <summary>Home</summary>
+  <img src="readme-docs/home-lh.PNG">
+</details>
+<details>
+  <summary>About </summary>
+  <img src="readme-docs/about-lh.PNG">
+</details>
+<details>
+  <summary>All products </summary>
+  <img src="readme-docs/products-lh.PNG">
+</details>
+<details>
+  <summary>Product Details </summary>
+  <img src="readme-docs/product-details-lh.PNG">
+</details>
+<details>
+  <summary>Blog </summary>
+  <img src="readme-docs/blog-lh.PNG">
+</details>
+<details>
+  <summary>Login </summary>
+  <img src="readme-docs/login-lh.PNG">
+</details>
+<details>
+  <summary>Register </summary>
+  <img src="readme-docs/register-lh.PNG">
+</details>
+<details>
+  <summary>Checkout </summary>
+  <img src="readme-docs/checkout-lh.PNG">
+</details>
+<details>
+  <summary>Checkout Success</summary>
+  <img src="readme-docs/checkout-success-lh.PNG">
+</details>
+<details>
+  <summary>Bag</summary>
+  <img src="readme-docs/bag-lh.PNG">
+</details>
+
+## Manual Testing
+
+**Testing Environments**
+
+Hugs For Shrubs app has been tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers (viewed at different desktop, laptop, tablet and mobile).
+
+All links, required fields, buttons, sorting function, carousel, forms, blog posts, all drop-down menus, product display, product detail and search bar work as expected.
+
+App has been reviewed by also by friends and family.
+
+Code Institutes criteria checklist has been used to check requirements. 
+
+[Back to top](#testing)
+
+<br>
+
+# Debugging 
+
+## Issues and Bugs
+
+### Bugs
+
+Bugs identified during development and testing and their solutions are recorded [here](/readme-docs/hugsbugs.PNG).
+
+### Known Issues
+
+1. When a toast appears for something such as a user updating their profile the bag preview comes up also. With more time this bug could coded out.
+2. The back to top button overlies the footer on some pages on mobile and is a poor visual experience. With more time this could be improved.
+3. There are still some issues with the position of the footer on some pages. Various fixes were tried for this including sitcking it to the bottom of the page  (this blocked too much content on mobile devices), and using calculated values to create sufficient padding on the preceding element to accommodate the footer, and again this worked well for some pages but not for others, in particular the pages that incorporated allauth forms. In the end an empty div of fixed size was added to some of the pages to improve the position of the footer. It is not an ideal solution as the footer is too far down on some pages and not quite far enough on others and with more time a better solution could be worked out.
+4. The emails to the user following an order aren't personalised. With more time this could be done.
