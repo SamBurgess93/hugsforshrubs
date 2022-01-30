@@ -285,9 +285,9 @@ All pages passed through Lighthouse in Chrome DevTools:
 
 Hugs For Shrubs app has been tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers (viewed at different desktop, laptop, tablet and mobile).
 
-All links, required fields, buttons, sorting function, carousel, forms, blog posts, all drop-down menus, product display, product detail and search bar work as expected.
+All links, required fields, buttons, sorting function, forms, blog posts, all drop-down menus, product display, product detail and search bar work as expected.
 
-App has been reviewed by also by friends and family.
+App has been reviewed also by friends and family.
 
 Code Institutes criteria checklist has been used to check requirements. 
 
