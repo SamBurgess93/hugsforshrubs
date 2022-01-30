@@ -2,7 +2,7 @@
 
 ![Preview](???)
 
-[Link to the Live Project](???).
+[Link to the Live Project](https://hugs-for-shrubs.herokuapp.com/)
 
 HugsForShrubs has been built as the 4th milestone project as part of Code Institute's Full Stack Software Development course.
 HugsForShrubs is a virtual 'E-commerce Website’ in which customers can purchase and browse Macrame plant hangers. It provides the user with a list of the various products available for purchase in the store. For the convenience of online shopping, a shopping cart is provided to the user. After the selection of the goods, it is sent to the order confirmation process for collection of payment. The system is implemented using Python’s web framework Django.
@@ -47,14 +47,12 @@ The primary goal of the HugsForShrubs website is engage with visitors to the web
 5. Sort the view of products by price low to high. So that I can make an informed purchased based on price.
 6. Sort the view of products by price high to low. So that I can make an informed purchased based on price.
 7. Be easily able to register and create my own account so I can have a personalised experience.
-8. Receive an verification email to verify that my account was set up.
-9. Easily view the value of my shopping cart anywhere on the website. So that I can understand how much I have selected.
-10. Easily view a summary of what's in my shopping cart, including all prices such as delivery and grand total price before I purchase. So that I can see how much I will be spending.
-11. See all reviews for the products.
-12. Check out and purchase my items without having to log in. So that I can conveniently purchase items quickly.
-13. Easily view the contact details for the company. So I can contact Hugs For Shrubs about my orders or requirements.
-14. Have easy and quick access to the companies social media links.
-15. Search for a specific product using keywords in a search bar.
+8. Easily view the value of my shopping cart anywhere on the website. So that I can understand how much I have selected.
+9. Easily view a summary of what's in my shopping cart, including all prices such as delivery and grand total price before I purchase. So that I can see how much I will be spending.
+10. See all reviews for the products.
+11. Check out and purchase my items without having to log in. So that I can conveniently purchase items quickly.
+12. Have easy and quick access to the companies social media links.
+13. Search for a specific product using keywords in a search bar.
 
 
 **As a registered user, I want to:**
@@ -62,10 +60,9 @@ The primary goal of the HugsForShrubs website is engage with visitors to the web
 2. Logout of my account effortlessly to keep my details secure.
 3. Easily recover my password if I forget it. So that I can recover my access to my profile.
 4. Have a personalised profile so that I can view my order history.
-5. View my order history, order confirmations, and saved payment information in my profile.
-6. Be able to update my payment and personal details if required.
-7. Be able to leave a review of a product I've purchased.
-8. Be able to create a blog post.
+5. Be able to update my payment and personal details if required.
+6. Be able to leave a review of a product I've purchased.
+7. Be able to create a blog post.
 
 
 **As a superuser, I want to:**
@@ -349,25 +346,12 @@ Wireframes and  Mockups were created in a Balsamiq Workspace with providing a po
 
 [Back to top ⇧](#table-of-contents)
 
-## Testing.
-Bugs identified during development and testing and their solutions are recorded [here](/media/hugsforshrubsbugs.png).
-### Validation
-- Because of the issues with trying to vailate code that uses jinja templating pages were tested by direct input of source code into [validator.w3.org](https://validator.w3.org/). The results of this can be seen [here](/media/htmlvalidation.png). 
-- CSS code from the css files in  static and checkout were tested by direct input into [jigsaw.w3.org](https://jigsaw.w3.org/css-validator/) until it got a 'Congratulations! No error found!' message.
-- JavaScript in checkout/js/stripe_elements.js, profile/static/profile/js/countryfield.js and gins/templates/gins/includes/quantity_input_script were checked using [jshint](https://jshint.com/). There were no errors and the warnings were checked, corrected where possible and otherwise left. Given more time more of these warnings might be rectified.
-- Throughout development Python code was tested with [flake 8](https://flake8.pycqa.org/en/latest/) and problems identified were corrected where possible. [PEP8 online](http://pep8online.com/) was used to help formatting. Some lines that did not comply with PEP8 due to being too long were left if they could not be made PEP8 compliant withour breaking the code. These were mainly in settings.py and migrations but there were some lines that, when corrected in PEP 8 online, no longer worked in the code. These occurred in checkout's webhook_handler.pyand webhooks.py,  and in widgets.py in gins and distilleries.
-- Lighthouse Audits. The site’s Performance, Accessibility, Best Practices and SEO were assessed by [Chrome Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) and the results of this are [here](/media/lighthousereport.png).
-- Manual Testing. At every step of development the errors highlighted in the code were addressed before proceeeding.
-The app was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
-It was viewed on a variety of devices. Friends and family members reviewed the site to identify bugs and give feedback on user experience. The code was submitted for peer-review in Code Institute's peer-code-review channel in [slack.com](https://app.slack.com/). 
-### Testing User Stories
-#### All users should be able to
 
-#### In addition registered users should be able to
+## Testing
 
+Testing section is located here [testing.md file](/testing.md)
 
-### Known Bugs
-
+[Back to top ⇧](#table-of-contents)
 
 ## Deployment
 
