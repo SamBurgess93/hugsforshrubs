@@ -3,32 +3,6 @@
 [View live website here!](https://hugs-for-shrubs.herokuapp.com/)
 
 
-## Table of Contents
-
-* [Testing User Stories from UX Section](#testing-user-stories-from-ux-section)
-    * [First Time Visitor Goals](#first-time-visitor-goals)
-    * [Returning Visitor Goals](#returning-visitor-goals)
-    * [Superuser Goals](#superuser-goals)
-   
-
-<br>
-
-* [Testing](#testing)
-    * [Automated Testing](#automated-testing)
-        + [W3C Markup Validator](#w3c-markup-validator)
-        + [W3C CSS Validation](#w3c-css-validation)
-        + [JSHint](#jshint)
-        + [PEP8 online check](#pep8-online-check)
-        + [Google Lighthouse](#google-lighthouse)
-    * [Manual Testing](#manual-testing)
-
-<br> 
-
-* [Debugging](#debugging)
-    * [Issues and Bugs](#issues-and-bugs)
-
-<br>
-
 # Testing User Stories from UX Section
 
 
@@ -331,7 +305,9 @@ Bugs identified during development and testing and their solutions are recorded 
 
 ### Known Issues
 
-1. When a toast appears for something such as a user updating their profile the bag preview comes up also. With more time this bug could coded out.
+1. When a toast appears for something such as a user updating their profile the bag preview comes up also. With more time this bug could be coded out.
 2. The back to top button overlies the footer on some pages on mobile and is a poor visual experience. With more time this could be improved.
-3. There are still some issues with the position of the footer on some pages. Various fixes were tried for this including sitcking it to the bottom of the page  (this blocked too much content on mobile devices), and using calculated values to create sufficient padding on the preceding element to accommodate the footer, and again this worked well for some pages but not for others, in particular the pages that incorporated allauth forms. In the end an empty div of fixed size was added to some of the pages to improve the position of the footer. It is not an ideal solution as the footer is too far down on some pages and not quite far enough on others and with more time a better solution could be worked out.
+3. There are still some issues with the position of the footer on some pages. Various fixes were tried for this including sticking it to the bottom of the page  (this blocked too much content on mobile devices), and using calculated values to create sufficient padding on the preceding element to accommodate the footer, and again this worked well for some pages but not for others, in particular the pages that incorporated allauth forms. In the end an empty div of fixed size was added to some of the pages to improve the position of the footer. It is not an ideal solution as the footer is too far down on some pages and not quite far enough on others and with more time a better solution could be worked out.
 4. The emails to the user following an order aren't personalised. With more time this could be done.
+
+[Back to top](#testing)

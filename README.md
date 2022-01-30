@@ -11,11 +11,11 @@ HugsForShrubs is a virtual 'E-commerce Website’ in which customers can purchas
 
 ## UX 
 ### Project Goals
-The scope of this project is to create a 'E-commerce website'. 
+The scope of this project is to create an 'E-commerce website'. 
  
 This is my 4th and final Milestone Project that must be developed as part of my Full Stack software development course with Code Institute.
 
-The primary goal of the HugsForShrubs website is engage with visitors to the website and as a result sell the handcrafted macrame plant hangers products.
+The primary goal of the HugsForShrubs website is to engage with website visitors resulting in sales of handcrafted macrame plant hanger products.
 
 
 ### User Stories
@@ -55,7 +55,7 @@ The primary goal of the HugsForShrubs website is engage with visitors to the web
 
 ## Development Planes
 
-In order to design and create Hugs For Shrubs, I developer distinguished the required functionality of the site and how it would answer the user stories, as described above, using the **Five Development Planes**:
+In order to design and create Hugs For Shrubs, I distinguished the required functionality of the site and how it would answer the user stories, as described above, using the **Five Development Planes**:
 
 ### <strong>1. <u>Strategy</u></strong>
 
@@ -63,9 +63,9 @@ The Hugs For Shrubs is an online e-commerce site with front-end and back-end fun
 
 ### <strong>2. <u>Scope</u></strong>
 
-The scope was created from using the Strategy previously defined. This allowed us to align the features to deliver on the strategy/ user stories. This was seperated into two categories:
+The scope was created using the Strategy previously defined. This allowed us to align the features to deliver on the strategy/ user stories. This was seperated into two categories:
 - **Content Requirements**
-     - The player will be looking for:
+     - The user will be looking for:
           - Dynamic and inviting visuals
           - Simple and vibrant content
           
@@ -76,7 +76,7 @@ The scope was created from using the Strategy previously defined. This allowed u
           - Search with ease using a search bar
           - Log In to their own profile
           - Make payments with ease
-          - Access to all products
+          - Access all products
           - Register for profile
           - Get contact details for owner
 
@@ -115,8 +115,7 @@ The footer has the links to the social media links.
 #### Homepage
 The home page has the navigation links, logo, hero image, call to action button, product categories and the footer.
 #### About Me
-The about page gives the user a short background on Hugs For Shrubs. This will also contain a contact form and a submit button.
-The user will see an alert on the screen confirming the message has been sent.
+The about page gives the user a short background on Hugs For Shrubs with information on the product range. 
 #### Product page
 The product page displays all products in the store.
 The sorting range button is also displayed here to allow the users sort products based on price, name and category.
@@ -124,7 +123,7 @@ The sorting range button is also displayed here to allow the users sort products
 The blog page will give registered users a chance to creat their own blog posts. The admin will have the power to delete these if they are not deemed
 appropriate.
 #### Product detail page
-   The product details page includes, name of the product, price , category, rating and product description.
+   The product details page includes: name of the product, price , category, rating and product description.
    There are also two button links one to keep shopping that leads to the all products page and the other add to bag button that adds the product to the user's shopping bag.
    Admin/ superuser has two links to delete or edit product. Reviews for each product will be visible at the bottom of the page.
 #### Toasts 
@@ -136,7 +135,7 @@ appropriate.
 #### Shopping Bag  page
   The shopping bag page can be broken into 5 parts for each product added to their cart:
   - Product - which displays an image of the product the user has added to their bag.
-  - Product info - displays the name of the product and product sku. 
+  - Product info - displays the name of the product. 
   - Price - displays the individual product price.
   - Quantity - Users are able to update their order using the quantity selectors and the update button. Users can also remove that product from their shopping cart entirely by clicking the remove button.
   - Subtotal - displays the subtotal for each product (product price * quantity).
@@ -160,13 +159,10 @@ The Checkout page is split into two columns on larger devices, and 2 rows on sma
 
  #### Profile page
    - Here users can update their default information by filling in the form and clicking update info button allowing them to make quick purchases at checkout.
-   - Regarding information aboutuser's past orders, users can click the order number to take them to the checkout success page .
- #### Saved Items
-  - The wishlists app allows signed-in users to create a list of saved Items. A user can add a product to their wishlist from the product detail page and manage their lists in the account section.
-  - When the used has added products to their wishlist ; they will be displayed here in the same format as the products page.
+   - Regarding information about user's past orders, users can click the order number to take them to the checkout success page .
 
 
-<br/>
+<br>
 
 ## <strong>4. <u>Skeleton</u></strong>
 
@@ -294,11 +290,13 @@ Wireframes and  Mockups were created in a Balsamiq Workspace with providing a po
 
 - <strong>Typography</strong>
 
-     - The primary font chosen is [Cardo](https://fonts.google.com/specimen/Cardo?query=cardo). A sans-serif typeface, Lato is geometrically shaped and is easily readable.
+     - The primary font chosen is [Cardo](https://fonts.google.com/specimen/Cardo?query=cardo). A sans-serif typeface, Cardo is geometrically shaped and is easily readable. 
 
-     - The charismatic combination of the typefaces compliments the clean aesthetic and entertaining theme set by the colour palette.
+     - For the headings I chose the [Shrikhand](https://fonts.google.com/specimen/Shrikhand?query=shrik). A vibrant font to illustrate the brand to the customer. 
 
-[Back to top ⇧](#table-of-contents)
+     - The charismatic combination of the typefaces complements the clean aesthetic and entertaining theme set by the colour palette.
+
+[Back to top ⇧](#hugsforshrubs)
 
 ## Features left to implement
 
@@ -317,6 +315,7 @@ Wireframes and  Mockups were created in a Balsamiq Workspace with providing a po
 - Adding a points system where repeat buyers can accumulate points and use those points for discounts.
 - Add pagination to products page.
 - Have a product total amount so a product can be listed as 'currently sold out'.
+- Contact form so users can send a query to the business owner.
 
 ## Database Schema
 ![Database Schema](readme-docs/database-drawing.png)
@@ -340,8 +339,7 @@ Wireframes and  Mockups were created in a Balsamiq Workspace with providing a po
 - [Font Awesome](https://fontawesome.com/) - Used for icons such as footer
 - [Balsamiq](https://balsamiq.com/) - Used for mockups ad wireframes
 
-[Back to top ⇧](#table-of-contents)
-
+[Back to top ⇧](#hugsforshrubs)
 
 ## Testing
 
@@ -509,11 +507,13 @@ Create a superuser with the following command: python3 manage.py createsuperuser
 Run the app by entering the following command:
 python3 manage.py runserver
 
-[Back to top ⇧](#table-of-contents)
+[Back to top ⇧](#hugsforshrubs)
 
 ## Credits 
 
 ### Images
+All images used for the site were used with permission by the Hugs for Shrubs business owner. 
+
 ### Code 
 I consulted the following sites to better understand some elements of code:
 - [Stack Overflow](https://stackoverflow.com/ "Link to Stack Overflow page")
@@ -528,4 +528,4 @@ I consulted the following sites to better understand some elements of code:
 - I would like to thank the tutors for their guidance on issues throughout the project.
 - I would like to thank my girlfriend Orla for her constant support and opinions throughout.
 
-[Back to top ⇧](#table-of-contents)
+[Back to top ⇧](#hugsforshrubs)
